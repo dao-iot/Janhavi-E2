@@ -4,3 +4,4 @@
 # Build outputs (optional but sane)
 .pio/
 build/
+.vscode/
