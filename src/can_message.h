@@ -1,5 +1,3 @@
-//can_message.h
-
 #ifndef CAN_MESSAGE_H
 #define CAN_MESSAGE_H
 

@@ -1,5 +1,3 @@
-//main.c
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -19,13 +17,9 @@
 #include "web_server.h"
 #include "tests.h"
 
-/* ------------------------------------------------------------
- * CAN MESSAGE UTILITIES
- * ------------------------------------------------------------ */
+/* CAN MESSAGE UTILITIES */
 
-/**
- * @brief Print a CAN message in human-readable form.
- */
+/* Print a CAN message in human-readable form. */
 void print_can_message(const CAN_Message *msg)
 {
     printf("ID: 0x%03X | DLC: %d | Data: [", msg->id, msg->dlc);
@@ -40,13 +34,9 @@ void print_can_message(const CAN_Message *msg)
     printf("]\n");
 }
 
-/* ------------------------------------------------------------
- * CAN SIMULATOR STATE
- * ------------------------------------------------------------ */
+/* CAN SIMULATOR STATE */
 
-/**
- * @brief Internal state used to simulate vehicle behavior.
- */
+/* Used to simulate vehicle behavior. */
 typedef struct
 {
     float motor_rpm;
@@ -59,9 +49,7 @@ typedef struct
     
 } CAN_Simulator;
 
-/**
- * @brief Initialize simulator parameters.
- */
+/* Initialize simulator parameters. */
 void simulator_init(CAN_Simulator *sim)
 {
     sim->motor_rpm         = 0.0f;
@@ -72,20 +60,14 @@ void simulator_init(CAN_Simulator *sim)
     sim->rpm_direction       = 1.0f;
 }
 
-/* ------------------------------------------------------------
- * VEHICLE DYNAMICS (SIMPLE MODEL)
- * ------------------------------------------------------------ */
+/* Simulated VEHICLE DYNAMICS */
 
-/**
- * @brief Update simulated vehicle dynamics.
- */
 void simulate_driving(CAN_Simulator *sim)
 {
     /* Gradual RPM increase */
     if (sim->rpm_direction == 1) {
     sim->motor_rpm += 200;
 
-    // allow RPM to go into fault range
     if (sim->motor_rpm >= 11000) {
         sim->rpm_direction = -1;
     }
@@ -118,9 +100,7 @@ void simulate_driving(CAN_Simulator *sim)
     }
 }
 
-/* ------------------------------------------------------------
- * CAN MESSAGE GENERATORS
- * ------------------------------------------------------------ */
+/* CAN MESSAGE GENERATORS */
 
 /* 0x101 – Motor RPM */
 CAN_Message make_rpm_message(const CAN_Simulator *sim)
@@ -193,9 +173,7 @@ CAN_Message make_temp_message(const CAN_Simulator *sim)
     return msg;
 }
 
-/* ------------------------------------------------------------
- * SIMULATION LOOP
- * ------------------------------------------------------------ */
+/* SIMULATION LOOP */
 
 void run_simulation(void)
 {
@@ -221,9 +199,7 @@ void run_simulation(void)
     }
 }
 
-/* ------------------------------------------------------------
- * WEB SERVER THREAD
- * ------------------------------------------------------------ */
+/* WEB SERVER THREAD */
 
 #ifdef _WIN32
 DWORD WINAPI web_server_thread(LPVOID arg)
@@ -241,9 +217,7 @@ void *web_server_thread(void *arg)
 }
 #endif
 
-/* ------------------------------------------------------------
- * MAIN APPLICATION
- * ------------------------------------------------------------ */
+/* MAIN APPLICATION */
 
 typedef enum
 {
@@ -272,13 +246,13 @@ int main(void)
     else if (choice == MODE_SIMULATION) {
         printf("\n--- Running SIMULATION MODE ---\n");
 
-#ifdef _WIN32
+    #ifdef _WIN32
         CreateThread(NULL, 0, web_server_thread, NULL, 0, NULL);
-#else
+    #else
         pthread_t server_tid;
         pthread_create(&server_tid, NULL, web_server_thread, NULL);
-#endif
-        run_simulation();   /* Blocking loop */
+    #endif
+        run_simulation();  
     }
     else {
         printf("ERROR: Unknown option selected\n");

@@ -1,5 +1,3 @@
-//parser.c
-
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
@@ -8,13 +6,9 @@
 #include "data_model.h"
 #include "can_message.h"
 
-/* ------------------------------------------------------------
- * DBC-LIKE SIGNAL DEFINITION
- * ------------------------------------------------------------ */
+/* DBC-LIKE SIGNAL DEFINITION */
 
-/**
- * @brief Describes a CAN signal using DBC-style metadata.
- */
+/* Describes a CAN signal using DBC-style. */
 typedef struct
 {
     /* Message-level metadata (BO_) */
@@ -40,13 +34,11 @@ typedef struct
 
 } CAN_SignalDef;
 
-/* ------------------------------------------------------------
- * SIGNAL TABLE (MINI DBC)
- * ------------------------------------------------------------ */
+/* SIGNAL TABLE (MINI DBC) */
 
 static CAN_SignalDef signal_table[] =
 {
-    { 0x101, "MotorRPM",        2, "Motor_RPM",        0, 16, 1.0f, 0.0f,   0.0f, 10000.0f, "rpm"  },
+    { 0x101, "MotorRPM",       2, "Motor_RPM",       0, 16, 1.0f, 0.0f,   0.0f, 10000.0f, "rpm"  },
     { 0x102, "VehicleSpeed",   2, "Vehicle_Speed",    0, 16, 0.1f, 0.0f,   0.0f,   120.0f, "km/h" },
     { 0x103, "BatterySOC",     1, "Battery_SOC",      0,  8, 1.0f, 0.0f,   0.0f,   100.0f, "%"    },
     { 0x104, "BatteryVoltage", 2, "Battery_Voltage",  0, 16, 0.1f, 0.0f,   0.0f,   100.0f, "V"    },
@@ -55,9 +47,7 @@ static CAN_SignalDef signal_table[] =
 
 #define SIGNAL_COUNT (sizeof(signal_table) / sizeof(signal_table[0]))
 
-/* ------------------------------------------------------------
- * RAW VALUE EXTRACTION
- * ------------------------------------------------------------ */
+/* RAW VALUE EXTRACTION */
 
 static uint32_t extract_raw_value(const CAN_Message *msg,
                                   const CAN_SignalDef *sig)
@@ -73,9 +63,7 @@ static uint32_t extract_raw_value(const CAN_Message *msg,
     return raw;
 }
 
-/* ------------------------------------------------------------
- * PARSER ENTRY POINT
- * ------------------------------------------------------------ */
+/* PARSER ENTRY POINT */
 
 void parse_can_message(const CAN_Message *msg)
 {

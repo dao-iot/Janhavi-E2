@@ -1,18 +1,11 @@
-//tests.c
-
 #include <stdio.h>
 
 #include "tests.h"
 #include "parser.h"
 #include "can_message.h"
 
-/* ------------------------------------------------------------
- * Test Case 1: Correct Parsing
- * ------------------------------------------------------------ */
-
-/**
- * @brief Verify correct parsing of Motor RPM.
- */
+/* Test Case 1: Correct Parsing */
+/* Verify correct parsing of Motor RPM. */
 static void test_correct_parsing(void)
 {
     printf("\n[Test 1] Correct Parsing (Motor RPM)\n");
@@ -27,13 +20,8 @@ static void test_correct_parsing(void)
     parse_can_message(&msg);
 }
 
-/* ------------------------------------------------------------
- * Test Case 2: Scaling Validation
- * ------------------------------------------------------------ */
-
-/**
- * @brief Verify scaling logic for battery voltage.
- */
+/* Test Case 2: Scaling Validation */
+/* Verify scaling logic for battery voltage. */
 static void test_scaling(void)
 {
     printf("\n[Test 2] Scaling Validation (Battery Voltage)\n");
@@ -48,13 +36,8 @@ static void test_scaling(void)
     parse_can_message(&msg);
 }
 
-/* ------------------------------------------------------------
- * Test Case 3: Range Validation
- * ------------------------------------------------------------ */
-
-/**
- * @brief Verify range checking for Battery SOC.
- */
+/* Test Case 3: Range Validation */
+/* Verify range checking for Battery SOC. */
 static void test_range_validation(void)
 {
     printf("\n[Test 3] Range Validation (Battery SOC)\n");
@@ -69,13 +52,8 @@ static void test_range_validation(void)
     parse_can_message(&msg);
 }
 
-/* ------------------------------------------------------------
- * Test Case 4: Invalid Messages
- * ------------------------------------------------------------ */
-
-/**
- * @brief Validate error handling for malformed CAN frames.
- */
+/* Test Case 4: Invalid Messages */
+/* Validate error handling for malformed CAN frames. */
 static void test_invalid_messages(void)
 {
     printf("\n[Test 4A] Unknown CAN ID\n");
@@ -109,9 +87,7 @@ static void test_invalid_messages(void)
     parse_can_message(&malformed);
 }
 
-/* ------------------------------------------------------------
- * Test Runner
- * ------------------------------------------------------------ */
+/* Test Runner */
 
 void run_all_tests(void)
 {

@@ -7,9 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/* ------------------------------------------------------------
- * DASHBOARD HTML (EMBEDDED)
- * ------------------------------------------------------------ */
+/* DASHBOARD HTML */
 
 static const char *dashboard_html =
 "<!DOCTYPE html>"
@@ -182,12 +180,7 @@ static const char *dashboard_html =
 "</body>"
 "</html>";
 
-
-
-
-/* ------------------------------------------------------------
- * SOCKET INCLUDES
- * ------------------------------------------------------------ */
+/* SOCKET INCLUDES */
 
 #ifdef _WIN32
 #include <winsock2.h>
@@ -201,9 +194,7 @@ static const char *dashboard_html =
 #define PORT        8080
 #define BUFFER_SIZE 1024
 
-/* ------------------------------------------------------------
- * WEB SERVER ENTRY POINT
- * ------------------------------------------------------------ */
+/* WEB SERVER ENTRY POINT */
 
 void start_web_server(void)
 {
@@ -239,9 +230,7 @@ void start_web_server(void)
 
     printf("Web server running at http://localhost:%d\n", PORT);
 
-    /* --------------------------------------------------------
-     * MAIN ACCEPT LOOP
-     * -------------------------------------------------------- */
+    /* MAIN ACCEPT LOOP */
 
     while (1) {
 
@@ -268,9 +257,7 @@ void start_web_server(void)
         read(client_fd, buffer, BUFFER_SIZE - 1);
 #endif
 
-        /* ----------------------------------------------------
-         * ROOT PAGE ("/")
-         * ---------------------------------------------------- */
+        /* ROOT PAGE ("/") */
         if (strncmp(buffer, "GET /", 5) == 0 &&
             strncmp(buffer, "GET /data", 9) != 0) {
 
@@ -293,9 +280,7 @@ void start_web_server(void)
             continue;
         }
 
-        /* ----------------------------------------------------
-         * DATA API ("/data")
-         * ---------------------------------------------------- */
+        /* DATA API ("/data") */
         if (strncmp(buffer, "GET /data", 9) == 0) {
 
             char response[512];
@@ -328,9 +313,7 @@ void start_web_server(void)
             continue;
         }
 
-        /* ----------------------------------------------------
-         * UNKNOWN PATH
-         * ---------------------------------------------------- */
+        /* UNKNOWN PATH */
         const char *not_found =
             "HTTP/1.1 404 Not Found\r\n"
             "Connection: close\r\n\r\n";

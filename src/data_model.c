@@ -1,10 +1,6 @@
-//data_model.c
-
 #include "data_model.h"
 
-/**
- * @brief Global vehicle data instance.
- *
+/* Global vehicle data instance.
  * Holds the latest decoded CAN signal values.
  * This structure is updated by the parser module
  * and consumed by the application, UI, or logging layers.
