@@ -26,19 +26,6 @@ The goal is to demonstrate how raw CAN frames are decoded, validated, simulated,
 | Motor Temperature   | 0x105  | 0 – 150      | °C   |
 ---
 
-## Project Structure
-
-CAN_Simulator_Native/
-├── src/
-│ ├── main.c # Entry point & mode selection
-│ ├── parser.c # CAN parsing and validation logic
-│ ├── tests.c # Parser test cases
-│ ├── web_server.c # Embedded HTTP server
-│ ├── data_model.c # Shared vehicle data
-│ └── *.h # Header files
-├── platformio.ini
----
-
 ## Modes of Operation
 
 ### 1. Test Mode
