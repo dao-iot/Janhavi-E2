@@ -1,0 +1,6 @@
+# Executables
+*.exe
+
+# Build outputs (optional but sane)
+.pio/
+build/
