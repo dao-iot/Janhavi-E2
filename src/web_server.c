@@ -1,5 +1,3 @@
-//web_server.c
-
 #include "web_server.h"
 #include "data_model.h"
 
