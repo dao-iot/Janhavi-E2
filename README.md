@@ -63,6 +63,7 @@ Continuously generates CAN frames to simulate vehicle behavior.
       Select Mode
       1 → Run Parser Test Cases
       2 → Run CAN Simulation
+4. A Message logger with timestamps is also created to keep the logs.
 
 ### Learning Outcomes
 1. CAN protocol fundamentals
