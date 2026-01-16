@@ -46,6 +46,7 @@ typedef struct
     float motor_temperature;
 
     int rpm_direction;
+    int speed_increasing;
     
 } CAN_Simulator;
 
@@ -57,7 +58,8 @@ void simulator_init(CAN_Simulator *sim)
     sim->battery_soc       = 100.0f;
     sim->battery_voltage   = 62.0f;
     sim->motor_temperature = 25.0f;
-    sim->rpm_direction       = 1.0f;
+    sim->rpm_direction     = 1.0f;
+    sim->speed_increasing  = 1.0f;
 }
 
 /* Simulated VEHICLE DYNAMICS */
@@ -80,10 +82,22 @@ void simulate_driving(CAN_Simulator *sim)
 }
 
     /* Speed derived from RPM */
-    float target_speed = sim->motor_rpm * 0.012f;
-    if (sim->vehicle_speed < target_speed) {
-        sim->vehicle_speed += ((rand() % 16) / 10.0f) + 0.5f;
+    /* Vehicle speed simulation */
+if (sim->vehicle_speed < 130.0f && sim->speed_increasing) {
+    sim->vehicle_speed += 2.5f;
+
+    if (sim->vehicle_speed >= 130.0f) {
+        sim->speed_increasing = 0;   // start reducing
     }
+} 
+else {
+    sim->vehicle_speed -= 3.0f;
+
+    if (sim->vehicle_speed <= 80.0f) {
+        sim->speed_increasing = 1;   
+    }
+}
+
 
     /* Battery SOC drain */
     if (sim->battery_soc > 0.0f) {

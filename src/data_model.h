@@ -18,6 +18,7 @@ typedef struct
 
     int rpm_warning;
     int speed_warning;
+    int speed_increasing;
 
 } VehicleData;
 
