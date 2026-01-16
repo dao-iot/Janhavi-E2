@@ -103,7 +103,7 @@ void parse_can_message(const CAN_Message *msg)
         }
         else if (strcmp(signal->signal_name, "Vehicle_Speed") == 0) {
             g_vehicle_data.vehicle_speed = physical;
-            g_vehicle_data.vehicle_speed = out_of_range;
+            g_vehicle_data.speed_warning = out_of_range;
         }
         else if (strcmp(signal->signal_name, "Battery_SOC") == 0) {
             g_vehicle_data.battery_soc = physical;
