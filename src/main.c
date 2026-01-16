@@ -16,6 +16,7 @@
 #include "parser.h"
 #include "web_server.h"
 #include "tests.h"
+#include "logger.h"
 
 /* CAN MESSAGE UTILITIES */
 
@@ -242,7 +243,7 @@ typedef enum
 int main(void)
 {
     int choice = 0;
-
+    logger_init();
     printf("Select Mode:\n");
     printf("  1. Run Parser Test Cases\n");
     printf("  2. Run CAN Simulation\n");
@@ -260,13 +261,13 @@ int main(void)
     else if (choice == MODE_SIMULATION) {
         printf("\n--- Running SIMULATION MODE ---\n");
 
-    #ifdef _WIN32
-        CreateThread(NULL, 0, web_server_thread, NULL, 0, NULL);
-    #else
-        pthread_t server_tid;
-        pthread_create(&server_tid, NULL, web_server_thread, NULL);
-    #endif
-        run_simulation();  
+        #ifdef _WIN32
+            CreateThread(NULL, 0, web_server_thread, NULL, 0, NULL);
+        #else
+            pthread_t server_tid;
+            pthread_create(&server_tid, NULL, web_server_thread, NULL);
+        #endif
+            run_simulation();  
     }
     else {
         printf("ERROR: Unknown option selected\n");

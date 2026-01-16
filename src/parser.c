@@ -5,6 +5,7 @@
 #include "parser.h"
 #include "data_model.h"
 #include "can_message.h"
+#include "logger.h"
 
 /* DBC-LIKE SIGNAL DEFINITION */
 
@@ -95,6 +96,13 @@ void parse_can_message(const CAN_Message *msg)
 
         printf("Decoded | %s = %.2f %s\n",
                signal->signal_name, physical, signal->unit);
+        
+        log_can_message(msg,
+                signal->signal_name,
+                physical,
+                signal->unit,
+                out_of_range);
+
 
         /* Update shared vehicle data */
         if (strcmp(signal->signal_name, "Motor_RPM") == 0) {
