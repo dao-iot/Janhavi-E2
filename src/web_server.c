@@ -119,6 +119,7 @@ static const char *dashboard_html =
 "    <div class='label'>Vehicle Speed</div>"
 "    <div class='value'><span id='speed'>---</span></div>"
 "    <div class='unit'>km/h</div>"
+"<div id='speed_warn' class='warn'></div>"
 "  </div>"
 
 /* Battery Voltage */
@@ -170,6 +171,10 @@ static const char *dashboard_html =
 "  document.getElementById('rpm_warn').innerText='RPM OUT OF RANGE';"
 " else"
 "  document.getElementById('rpm_warn').innerText='';"
+" if(d.speed_warning)"
+"  document.getElementById('speed_warn').innerText='SPEED OUT OF RANGE';"
+" else"
+"  document.getElementById('speed_warn').innerText='';"
 "}"
 "setInterval(update,500);"
 "update();"
@@ -290,6 +295,7 @@ void start_web_server(void)
                      "\"motor_rpm\": %.2f,"
                      "\"rpm_warning\": %d,"
                      "\"vehicle_speed\": %.2f,"
+                     "\"speed_warning\": %d,"
                      "\"battery_soc\": %.2f,"
                      "\"battery_voltage\": %.2f,"
                      "\"motor_temperature\": %.2f"
@@ -297,6 +303,7 @@ void start_web_server(void)
                      g_vehicle_data.motor_rpm,
                      g_vehicle_data.rpm_warning,
                      g_vehicle_data.vehicle_speed,
+                     g_vehicle_data.speed_warning,
                      g_vehicle_data.battery_soc,
                      g_vehicle_data.battery_voltage,
                      g_vehicle_data.motor_temperature);

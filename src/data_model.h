@@ -17,6 +17,7 @@ typedef struct
     float motor_temperature;  /* Motor temperature */
 
     int rpm_warning;
+    int speed_warning;
 
 } VehicleData;
 
