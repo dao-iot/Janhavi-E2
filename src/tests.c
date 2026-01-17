@@ -6,9 +6,6 @@
 #include "can_message.h"
 #include "data_model.h"
 
-/* ------------------------------------------------------------
- * HELPER: ADD TEST RESULT SAFELY
- * ------------------------------------------------------------ */
 static void add_test_result(const char *name,
                             const char *input,
                             const char *output,
@@ -125,18 +122,30 @@ static void test_unknown_can_id(void)
     CAN_Message msg = {
         .id  = 0x999,
         .dlc = 2,
-        .data = {0x00, 0x00}
+        .data = {0xAA, 0xBB}
     };
+
+    VehicleData before = g_vehicle_data;
 
     parse_can_message(&msg);
 
-    add_test_result(
-        "Unknown CAN ID Handling",
-        "ID=0x999",
-        "Message ignored safely",
-        TEST_PASS
-    );
+    if (memcmp(&before, &g_vehicle_data, sizeof(VehicleData)) == 0) {
+        add_test_result(
+            "Unknown CAN ID Handling",
+            "ID=0x999 DLC=2 DATA=[AA BB]",
+            "Message ignored safely",
+            TEST_PASS
+        );
+    } else {
+        add_test_result(
+            "Unknown CAN ID Handling",
+            "ID=0x999 DLC=2 DATA=[AA BB]",
+            "Unknown ID modified vehicle data",
+            TEST_ERROR
+        );
+    }
 }
+
 
 /* ------------------------------------------------------------
  * TEST 4B: WRONG DLC
@@ -144,20 +153,32 @@ static void test_unknown_can_id(void)
 static void test_wrong_dlc(void)
 {
     CAN_Message msg = {
-        .id  = 0x101,
-        .dlc = 1,    /* should be 2 */
+        .id  = 0x101,   /* Motor RPM expects DLC = 2 */
+        .dlc = 1,
         .data = {0x10}
     };
 
+    VehicleData before = g_vehicle_data;
+
     parse_can_message(&msg);
 
-    add_test_result(
-        "Wrong DLC Detection",
-        "ID=0x101 DLC=1",
-        "DLC mismatch detected",
-        TEST_PASS
-    );
+    if (memcmp(&before, &g_vehicle_data, sizeof(VehicleData)) == 0) {
+        add_test_result(
+            "Wrong DLC Detection",
+            "ID=0x101 DLC=1 DATA=[10]",
+            "DLC mismatch correctly ignored",
+            TEST_PASS
+        );
+    } else {
+        add_test_result(
+            "Wrong DLC Detection",
+            "ID=0x101 DLC=1 DATA=[10]",
+            "Data modified despite wrong DLC",
+            TEST_ERROR
+        );
+    }
 }
+
 
 /* ------------------------------------------------------------
  * TEST RUNNER
