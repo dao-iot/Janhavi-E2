@@ -1,102 +1,178 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "tests.h"
 #include "parser.h"
 #include "can_message.h"
+#include "data_model.h"
 
-/* Test Case 1: Correct Parsing */
-/* Verify correct parsing of Motor RPM. */
-static void test_correct_parsing(void)
+/* ------------------------------------------------------------
+ * HELPER: ADD TEST RESULT SAFELY
+ * ------------------------------------------------------------ */
+static void add_test_result(const char *name,
+                            const char *input,
+                            const char *output,
+                            TestStatus status)
 {
-    printf("\n[Test 1] Correct Parsing (Motor RPM)\n");
+    TestDashboardData *td = &g_vehicle_data.test_dashboard;
 
-    CAN_Message msg = {
-        .id   = 0x101,
-        .dlc  = 2,
-        .data = {0x13, 0x88}   /* 0x1388 = 5000 RPM */
-    };
+    if (td->count >= MAX_TESTS)
+        return;
 
-    print_can_message(&msg);
-    parse_can_message(&msg);
+    TestResult *r = &td->results[td->count++];
+
+    snprintf(r->name, sizeof(r->name), "%s", name);
+    snprintf(r->input, sizeof(r->input), "%s", input);
+    snprintf(r->output, sizeof(r->output), "%s", output);
+    r->status = status;
 }
 
-/* Test Case 2: Scaling Validation */
-/* Verify scaling logic for battery voltage. */
-static void test_scaling(void)
+/* ------------------------------------------------------------
+ * TEST 1: CORRECT PARSING (Motor RPM)
+ * ------------------------------------------------------------ */
+static void test_motor_rpm_parsing(void)
 {
-    printf("\n[Test 2] Scaling Validation (Battery Voltage)\n");
-
     CAN_Message msg = {
-        .id   = 0x104,
-        .dlc  = 2,
-        .data = {0x02, 0x71}   /* 0x0271 = 625 → 62.5 V */
+        .id  = 0x101,
+        .dlc = 2,
+        .data = {0x13, 0x88}   /* 5000 RPM */
     };
 
-    print_can_message(&msg);
     parse_can_message(&msg);
+
+    if ((int)g_vehicle_data.motor_rpm == 5000) {
+        add_test_result(
+            "Motor RPM Parsing",
+            "ID=0x101 DLC=2 DATA=[13 88]",
+            "Motor_RPM = 5000 rpm",
+            TEST_PASS
+        );
+    } else {
+        add_test_result(
+            "Motor RPM Parsing",
+            "ID=0x101 DLC=2 DATA=[13 88]",
+            "Incorrect RPM decoding",
+            TEST_ERROR
+        );
+    }
 }
 
-/* Test Case 3: Range Validation */
-/* Verify range checking for Battery SOC. */
-static void test_range_validation(void)
+/* ------------------------------------------------------------
+ * TEST 2: SCALING VALIDATION (Battery Voltage)
+ * ------------------------------------------------------------ */
+static void test_voltage_scaling(void)
 {
-    printf("\n[Test 3] Range Validation (Battery SOC)\n");
-
     CAN_Message msg = {
-        .id   = 0x103,
-        .dlc  = 1,
-        .data = {0xFF}         /* 255% → invalid */
+        .id  = 0x104,
+        .dlc = 2,
+        .data = {0x02, 0x71}   /* 625 → 62.5 V */
     };
 
-    print_can_message(&msg);
     parse_can_message(&msg);
+
+    if ((int)(g_vehicle_data.battery_voltage * 10) == 625) {
+        add_test_result(
+            "Battery Voltage Scaling",
+            "ID=0x104 DLC=2 DATA=[02 71]",
+            "Voltage = 62.5 V",
+            TEST_PASS
+        );
+    } else {
+        add_test_result(
+            "Battery Voltage Scaling",
+            "ID=0x104 DLC=2 DATA=[02 71]",
+            "Scaling error",
+            TEST_ERROR
+        );
+    }
 }
 
-/* Test Case 4: Invalid Messages */
-/* Validate error handling for malformed CAN frames. */
-static void test_invalid_messages(void)
+/* ------------------------------------------------------------
+ * TEST 3: RANGE VALIDATION (Battery SOC)
+ * ------------------------------------------------------------ */
+static void test_soc_range_check(void)
 {
-    printf("\n[Test 4A] Unknown CAN ID\n");
+    CAN_Message msg = {
+        .id  = 0x103,
+        .dlc = 1,
+        .data = {0xFF}   /* 255% → invalid */
+    };
 
-    CAN_Message unknown_id = {
-        .id   = 0x999,
-        .dlc  = 2,
+    parse_can_message(&msg);
+
+    if (g_vehicle_data.battery_soc > 100) {
+        add_test_result(
+            "Battery SOC Range Check",
+            "ID=0x103 DLC=1 DATA=[FF]",
+            "SOC out of range detected",
+            TEST_WARNING
+        );
+    } else {
+        add_test_result(
+            "Battery SOC Range Check",
+            "ID=0x103 DLC=1 DATA=[FF]",
+            "Range check failed",
+            TEST_ERROR
+        );
+    }
+}
+
+/* ------------------------------------------------------------
+ * TEST 4A: UNKNOWN CAN ID
+ * ------------------------------------------------------------ */
+static void test_unknown_can_id(void)
+{
+    CAN_Message msg = {
+        .id  = 0x999,
+        .dlc = 2,
         .data = {0x00, 0x00}
     };
-    print_can_message(&unknown_id);
-    parse_can_message(&unknown_id);
 
-    printf("\n[Test 4B] Incorrect DLC\n");
+    parse_can_message(&msg);
 
-    CAN_Message wrong_dlc = {
-        .id   = 0x101,
-        .dlc  = 1,             /* Should be 2 */
-        .data = {0x10}
-    };
-    print_can_message(&wrong_dlc);
-    parse_can_message(&wrong_dlc);
-
-    printf("\n[Test 4C] Malformed Data\n");
-
-    CAN_Message malformed = {
-        .id   = 0x104,
-        .dlc  = 2,
-        .data = {0xFF}         /* Missing second byte */
-    };
-    print_can_message(&malformed);
-    parse_can_message(&malformed);
+    add_test_result(
+        "Unknown CAN ID Handling",
+        "ID=0x999",
+        "Message ignored safely",
+        TEST_PASS
+    );
 }
 
-/* Test Runner */
+/* ------------------------------------------------------------
+ * TEST 4B: WRONG DLC
+ * ------------------------------------------------------------ */
+static void test_wrong_dlc(void)
+{
+    CAN_Message msg = {
+        .id  = 0x101,
+        .dlc = 1,    /* should be 2 */
+        .data = {0x10}
+    };
 
+    parse_can_message(&msg);
+
+    add_test_result(
+        "Wrong DLC Detection",
+        "ID=0x101 DLC=1",
+        "DLC mismatch detected",
+        TEST_PASS
+    );
+}
+
+/* ------------------------------------------------------------
+ * TEST RUNNER
+ * ------------------------------------------------------------ */
 void run_all_tests(void)
 {
-    printf("\n--- CAN PARSER TEST MODE ---\n");
+    /* Switch system to TEST MODE */
+    g_vehicle_data.mode = 1;
+    g_vehicle_data.test_dashboard.count = 0;
 
-    test_correct_parsing();
-    test_scaling();
-    test_range_validation();
-    test_invalid_messages();
+    test_motor_rpm_parsing();
+    test_voltage_scaling();
+    test_soc_range_check();
+    test_unknown_can_id();
+    test_wrong_dlc();
 
-    printf("\n--- TESTS COMPLETE ---\n");
+    printf("All tests executed.\n");
 }

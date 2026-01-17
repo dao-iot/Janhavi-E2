@@ -17,10 +17,10 @@
 #include "web_server.h"
 #include "tests.h"
 #include "logger.h"
-
+#include "data_model.h"
 /* CAN MESSAGE UTILITIES */
 
-/* Print a CAN message in human-readable form. */
+/* Prints a CAN message frame. */
 void print_can_message(const CAN_Message *msg)
 {
     printf("ID: 0x%03X | DLC: %d | Data: [", msg->id, msg->dlc);
@@ -82,7 +82,6 @@ void simulate_driving(CAN_Simulator *sim)
     }
 }
 
-    /* Speed derived from RPM */
     /* Vehicle speed simulation */
 if (sim->vehicle_speed < 130.0f && sim->speed_increasing) {
     sim->vehicle_speed += 2.5f;
@@ -98,7 +97,6 @@ else {
         sim->speed_increasing = 1;   
     }
 }
-
 
     /* Battery SOC drain */
     if (sim->battery_soc > 0.0f) {
@@ -233,19 +231,19 @@ void *web_server_thread(void *arg)
 #endif
 
 /* MAIN APPLICATION */
-
-typedef enum
-{
-    MODE_SIMULATION = 2,
-    MODE_TEST       = 1
-} AppMode;
-
 int main(void)
 {
     int choice = 0;
     logger_init();
+    #ifdef _WIN32
+        CreateThread(NULL, 0, web_server_thread, NULL, 0, NULL);
+    #else
+        pthread_t server_tid;
+        pthread_create(&server_tid, NULL, web_server_thread, NULL);
+    #endif
+    
     printf("Select Mode:\n");
-    printf("  1. Run Parser Test Cases\n");
+    printf("  1. Run Test Cases\n");
     printf("  2. Run CAN Simulation\n");
     printf("Enter your choice: ");
 
@@ -256,18 +254,16 @@ int main(void)
 
     if (choice == MODE_TEST) {
         printf("\n--- Running TEST MODE ---\n");
+        g_vehicle_data.mode = MODE_TEST;
+        g_vehicle_data.test_dashboard.count = 0;
         run_all_tests();
+        while (1) { SLEEP_MS(1000);
     }
+}
     else if (choice == MODE_SIMULATION) {
         printf("\n--- Running SIMULATION MODE ---\n");
-
-        #ifdef _WIN32
-            CreateThread(NULL, 0, web_server_thread, NULL, 0, NULL);
-        #else
-            pthread_t server_tid;
-            pthread_create(&server_tid, NULL, web_server_thread, NULL);
-        #endif
-            run_simulation();  
+        g_vehicle_data.mode = MODE_SIMULATION;
+        run_simulation();  
     }
     else {
         printf("ERROR: Unknown option selected\n");

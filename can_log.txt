@@ -1,317 +1,104 @@
 TIMESTAMP | CAN_ID | DLC | DATA | SIGNAL | VALUE | STATUS
-2026-01-16 10:44:44 | 0x101 | 2 | 00 C8 | Motor_RPM | 200.00 rpm | OK
-2026-01-16 10:44:44 | 0x102 | 2 | 00 19 | Vehicle_Speed | 2.50 km/h | OK
-2026-01-16 10:44:44 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:44 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:44 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:45 | 0x101 | 2 | 01 90 | Motor_RPM | 400.00 rpm | OK
-2026-01-16 10:44:45 | 0x102 | 2 | 00 32 | Vehicle_Speed | 5.00 km/h | OK
-2026-01-16 10:44:45 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:45 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:45 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:45 | 0x101 | 2 | 02 58 | Motor_RPM | 600.00 rpm | OK
-2026-01-16 10:44:45 | 0x102 | 2 | 00 4B | Vehicle_Speed | 7.50 km/h | OK
-2026-01-16 10:44:45 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:46 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:46 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:46 | 0x101 | 2 | 03 20 | Motor_RPM | 800.00 rpm | OK
-2026-01-16 10:44:46 | 0x102 | 2 | 00 64 | Vehicle_Speed | 10.00 km/h | OK
-2026-01-16 10:44:46 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:46 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:46 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:46 | 0x101 | 2 | 03 E8 | Motor_RPM | 1000.00 rpm | OK
-2026-01-16 10:44:46 | 0x102 | 2 | 00 7D | Vehicle_Speed | 12.50 km/h | OK
-2026-01-16 10:44:47 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:47 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:47 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:47 | 0x101 | 2 | 04 B0 | Motor_RPM | 1200.00 rpm | OK
-2026-01-16 10:44:47 | 0x102 | 2 | 00 96 | Vehicle_Speed | 15.00 km/h | OK
-2026-01-16 10:44:47 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:47 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:47 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:47 | 0x101 | 2 | 05 78 | Motor_RPM | 1400.00 rpm | OK
-2026-01-16 10:44:48 | 0x102 | 2 | 00 AF | Vehicle_Speed | 17.50 km/h | OK
-2026-01-16 10:44:48 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:48 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:48 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:48 | 0x101 | 2 | 06 40 | Motor_RPM | 1600.00 rpm | OK
-2026-01-16 10:44:48 | 0x102 | 2 | 00 C8 | Vehicle_Speed | 20.00 km/h | OK
-2026-01-16 10:44:48 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:48 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:48 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:49 | 0x101 | 2 | 07 08 | Motor_RPM | 1800.00 rpm | OK
-2026-01-16 10:44:49 | 0x102 | 2 | 00 E1 | Vehicle_Speed | 22.50 km/h | OK
-2026-01-16 10:44:49 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:49 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:49 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
-2026-01-16 10:44:49 | 0x101 | 2 | 07 D0 | Motor_RPM | 2000.00 rpm | OK
-2026-01-16 10:44:49 | 0x102 | 2 | 00 FA | Vehicle_Speed | 25.00 km/h | OK
-2026-01-16 10:44:49 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:49 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:50 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:50 | 0x101 | 2 | 08 98 | Motor_RPM | 2200.00 rpm | OK
-2026-01-16 10:44:50 | 0x102 | 2 | 01 13 | Vehicle_Speed | 27.50 km/h | OK
-2026-01-16 10:44:50 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:50 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:50 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:50 | 0x101 | 2 | 09 60 | Motor_RPM | 2400.00 rpm | OK
-2026-01-16 10:44:50 | 0x102 | 2 | 01 2C | Vehicle_Speed | 30.00 km/h | OK
-2026-01-16 10:44:50 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:51 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:51 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:51 | 0x101 | 2 | 0A 28 | Motor_RPM | 2600.00 rpm | OK
-2026-01-16 10:44:51 | 0x102 | 2 | 01 45 | Vehicle_Speed | 32.50 km/h | OK
-2026-01-16 10:44:51 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:51 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:51 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:51 | 0x101 | 2 | 0A F0 | Motor_RPM | 2800.00 rpm | OK
-2026-01-16 10:44:51 | 0x102 | 2 | 01 5E | Vehicle_Speed | 35.00 km/h | OK
-2026-01-16 10:44:52 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:52 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:52 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:52 | 0x101 | 2 | 0B B8 | Motor_RPM | 3000.00 rpm | OK
-2026-01-16 10:44:52 | 0x102 | 2 | 01 77 | Vehicle_Speed | 37.50 km/h | OK
-2026-01-16 10:44:52 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:52 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:52 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:52 | 0x101 | 2 | 0C 80 | Motor_RPM | 3200.00 rpm | OK
-2026-01-16 10:44:53 | 0x102 | 2 | 01 90 | Vehicle_Speed | 40.00 km/h | OK
-2026-01-16 10:44:53 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:53 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:53 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:53 | 0x101 | 2 | 0D 48 | Motor_RPM | 3400.00 rpm | OK
-2026-01-16 10:44:53 | 0x102 | 2 | 01 A9 | Vehicle_Speed | 42.50 km/h | OK
-2026-01-16 10:44:53 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:53 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:53 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:54 | 0x101 | 2 | 0E 10 | Motor_RPM | 3600.00 rpm | OK
-2026-01-16 10:44:54 | 0x102 | 2 | 01 C2 | Vehicle_Speed | 45.00 km/h | OK
-2026-01-16 10:44:54 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:54 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:54 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:54 | 0x101 | 2 | 0E D8 | Motor_RPM | 3800.00 rpm | OK
-2026-01-16 10:44:54 | 0x102 | 2 | 01 DB | Vehicle_Speed | 47.50 km/h | OK
-2026-01-16 10:44:54 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:54 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:54 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
-2026-01-16 10:44:55 | 0x101 | 2 | 0F A0 | Motor_RPM | 4000.00 rpm | OK
-2026-01-16 10:44:55 | 0x102 | 2 | 01 F4 | Vehicle_Speed | 50.00 km/h | OK
-2026-01-16 10:44:55 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:55 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:55 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:55 | 0x101 | 2 | 10 68 | Motor_RPM | 4200.00 rpm | OK
-2026-01-16 10:44:55 | 0x102 | 2 | 02 0D | Vehicle_Speed | 52.50 km/h | OK
-2026-01-16 10:44:55 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:56 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:56 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:56 | 0x101 | 2 | 11 30 | Motor_RPM | 4400.00 rpm | OK
-2026-01-16 10:44:56 | 0x102 | 2 | 02 26 | Vehicle_Speed | 55.00 km/h | OK
-2026-01-16 10:44:56 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:56 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:56 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:56 | 0x101 | 2 | 11 F8 | Motor_RPM | 4600.00 rpm | OK
-2026-01-16 10:44:56 | 0x102 | 2 | 02 3F | Vehicle_Speed | 57.50 km/h | OK
-2026-01-16 10:44:57 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:57 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:57 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:57 | 0x101 | 2 | 12 C0 | Motor_RPM | 4800.00 rpm | OK
-2026-01-16 10:44:57 | 0x102 | 2 | 02 58 | Vehicle_Speed | 60.00 km/h | OK
-2026-01-16 10:44:57 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:57 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:57 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:57 | 0x101 | 2 | 13 88 | Motor_RPM | 5000.00 rpm | OK
-2026-01-16 10:44:58 | 0x102 | 2 | 02 71 | Vehicle_Speed | 62.50 km/h | OK
-2026-01-16 10:44:58 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:58 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:58 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:58 | 0x101 | 2 | 14 50 | Motor_RPM | 5200.00 rpm | OK
-2026-01-16 10:44:58 | 0x102 | 2 | 02 8A | Vehicle_Speed | 65.00 km/h | OK
-2026-01-16 10:44:58 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:58 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:58 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:59 | 0x101 | 2 | 15 18 | Motor_RPM | 5400.00 rpm | OK
-2026-01-16 10:44:59 | 0x102 | 2 | 02 A3 | Vehicle_Speed | 67.50 km/h | OK
-2026-01-16 10:44:59 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:59 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:44:59 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:44:59 | 0x101 | 2 | 15 E0 | Motor_RPM | 5600.00 rpm | OK
-2026-01-16 10:44:59 | 0x102 | 2 | 02 BC | Vehicle_Speed | 70.00 km/h | OK
-2026-01-16 10:44:59 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:44:59 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:00 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:45:00 | 0x101 | 2 | 16 A8 | Motor_RPM | 5800.00 rpm | OK
-2026-01-16 10:45:00 | 0x102 | 2 | 02 D5 | Vehicle_Speed | 72.50 km/h | OK
-2026-01-16 10:45:00 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:00 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:00 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
-2026-01-16 10:45:00 | 0x101 | 2 | 17 70 | Motor_RPM | 6000.00 rpm | OK
-2026-01-16 10:45:00 | 0x102 | 2 | 02 EE | Vehicle_Speed | 75.00 km/h | OK
-2026-01-16 10:45:00 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:01 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:01 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:01 | 0x101 | 2 | 18 38 | Motor_RPM | 6200.00 rpm | OK
-2026-01-16 10:45:01 | 0x102 | 2 | 03 07 | Vehicle_Speed | 77.50 km/h | OK
-2026-01-16 10:45:01 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:01 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:01 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:01 | 0x101 | 2 | 19 00 | Motor_RPM | 6400.00 rpm | OK
-2026-01-16 10:45:01 | 0x102 | 2 | 03 20 | Vehicle_Speed | 80.00 km/h | OK
-2026-01-16 10:45:02 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:02 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:02 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:02 | 0x101 | 2 | 19 C8 | Motor_RPM | 6600.00 rpm | OK
-2026-01-16 10:45:02 | 0x102 | 2 | 03 39 | Vehicle_Speed | 82.50 km/h | OK
-2026-01-16 10:45:02 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:02 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:02 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:02 | 0x101 | 2 | 1A 90 | Motor_RPM | 6800.00 rpm | OK
-2026-01-16 10:45:03 | 0x102 | 2 | 03 52 | Vehicle_Speed | 85.00 km/h | OK
-2026-01-16 10:45:03 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:03 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:03 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:03 | 0x101 | 2 | 1B 58 | Motor_RPM | 7000.00 rpm | OK
-2026-01-16 10:45:03 | 0x102 | 2 | 03 6B | Vehicle_Speed | 87.50 km/h | OK
-2026-01-16 10:45:03 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:03 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:03 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:04 | 0x101 | 2 | 1C 20 | Motor_RPM | 7200.00 rpm | OK
-2026-01-16 10:45:04 | 0x102 | 2 | 03 84 | Vehicle_Speed | 90.00 km/h | OK
-2026-01-16 10:45:04 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:04 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:04 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:04 | 0x101 | 2 | 1C E8 | Motor_RPM | 7400.00 rpm | OK
-2026-01-16 10:45:04 | 0x102 | 2 | 03 9D | Vehicle_Speed | 92.50 km/h | OK
-2026-01-16 10:45:04 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:04 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:05 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:05 | 0x101 | 2 | 1D B0 | Motor_RPM | 7600.00 rpm | OK
-2026-01-16 10:45:05 | 0x102 | 2 | 03 B6 | Vehicle_Speed | 95.00 km/h | OK
-2026-01-16 10:45:05 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:05 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:05 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:05 | 0x101 | 2 | 1E 78 | Motor_RPM | 7800.00 rpm | OK
-2026-01-16 10:45:05 | 0x102 | 2 | 03 CF | Vehicle_Speed | 97.50 km/h | OK
-2026-01-16 10:45:05 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:06 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:06 | 0x105 | 1 | 1C | Motor_Temperature | 28.00 C | OK
-2026-01-16 10:45:06 | 0x101 | 2 | 1F 40 | Motor_RPM | 8000.00 rpm | OK
-2026-01-16 10:45:06 | 0x102 | 2 | 03 E8 | Vehicle_Speed | 100.00 km/h | OK
-2026-01-16 10:45:06 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:06 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:06 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:06 | 0x101 | 2 | 20 08 | Motor_RPM | 8200.00 rpm | OK
-2026-01-16 10:45:06 | 0x102 | 2 | 04 01 | Vehicle_Speed | 102.50 km/h | OK
-2026-01-16 10:45:07 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:07 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:07 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:07 | 0x101 | 2 | 20 D0 | Motor_RPM | 8400.00 rpm | OK
-2026-01-16 10:45:07 | 0x102 | 2 | 04 1A | Vehicle_Speed | 105.00 km/h | OK
-2026-01-16 10:45:07 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:07 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:07 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:07 | 0x101 | 2 | 21 98 | Motor_RPM | 8600.00 rpm | OK
-2026-01-16 10:45:08 | 0x102 | 2 | 04 33 | Vehicle_Speed | 107.50 km/h | OK
-2026-01-16 10:45:08 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:08 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:08 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:08 | 0x101 | 2 | 22 60 | Motor_RPM | 8800.00 rpm | OK
-2026-01-16 10:45:08 | 0x102 | 2 | 04 4C | Vehicle_Speed | 110.00 km/h | OK
-2026-01-16 10:45:08 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:08 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:08 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:09 | 0x101 | 2 | 23 28 | Motor_RPM | 9000.00 rpm | OK
-2026-01-16 10:45:09 | 0x102 | 2 | 04 65 | Vehicle_Speed | 112.50 km/h | OK
-2026-01-16 10:45:09 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:09 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:09 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:09 | 0x101 | 2 | 23 F0 | Motor_RPM | 9200.00 rpm | OK
-2026-01-16 10:45:09 | 0x102 | 2 | 04 7E | Vehicle_Speed | 115.00 km/h | OK
-2026-01-16 10:45:09 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:09 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:10 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:10 | 0x101 | 2 | 24 B8 | Motor_RPM | 9400.00 rpm | OK
-2026-01-16 10:45:10 | 0x102 | 2 | 04 97 | Vehicle_Speed | 117.50 km/h | OK
-2026-01-16 10:45:10 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:10 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:10 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:10 | 0x101 | 2 | 25 80 | Motor_RPM | 9600.00 rpm | OK
-2026-01-16 10:45:10 | 0x102 | 2 | 04 B0 | Vehicle_Speed | 120.00 km/h | OK
-2026-01-16 10:45:10 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:11 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:11 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:11 | 0x101 | 2 | 26 48 | Motor_RPM | 9800.00 rpm | OK
-2026-01-16 10:45:11 | 0x102 | 2 | 04 C9 | Vehicle_Speed | 122.50 km/h | WARNING
-2026-01-16 10:45:11 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:11 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:11 | 0x105 | 1 | 1D | Motor_Temperature | 29.00 C | OK
-2026-01-16 10:45:11 | 0x101 | 2 | 27 10 | Motor_RPM | 10000.00 rpm | OK
-2026-01-16 10:45:11 | 0x102 | 2 | 04 E2 | Vehicle_Speed | 125.00 km/h | WARNING
-2026-01-16 10:45:12 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:12 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:12 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:12 | 0x101 | 2 | 27 D8 | Motor_RPM | 10200.00 rpm | WARNING
-2026-01-16 10:45:12 | 0x102 | 2 | 04 FB | Vehicle_Speed | 127.50 km/h | WARNING
-2026-01-16 10:45:12 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:12 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:12 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:12 | 0x101 | 2 | 28 A0 | Motor_RPM | 10400.00 rpm | WARNING
-2026-01-16 10:45:13 | 0x102 | 2 | 05 14 | Vehicle_Speed | 130.00 km/h | WARNING
-2026-01-16 10:45:13 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:13 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:13 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:13 | 0x101 | 2 | 29 68 | Motor_RPM | 10600.00 rpm | WARNING
-2026-01-16 10:45:13 | 0x102 | 2 | 04 F6 | Vehicle_Speed | 127.00 km/h | WARNING
-2026-01-16 10:45:13 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:13 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:13 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:14 | 0x101 | 2 | 2A 30 | Motor_RPM | 10800.00 rpm | WARNING
-2026-01-16 10:45:14 | 0x102 | 2 | 04 D8 | Vehicle_Speed | 124.00 km/h | WARNING
-2026-01-16 10:45:14 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:14 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:14 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:14 | 0x101 | 2 | 2A F8 | Motor_RPM | 11000.00 rpm | WARNING
-2026-01-16 10:45:14 | 0x102 | 2 | 04 BA | Vehicle_Speed | 121.00 km/h | WARNING
-2026-01-16 10:45:14 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:14 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:15 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:15 | 0x101 | 2 | 2A 30 | Motor_RPM | 10800.00 rpm | WARNING
-2026-01-16 10:45:15 | 0x102 | 2 | 04 9C | Vehicle_Speed | 118.00 km/h | OK
-2026-01-16 10:45:15 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:15 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:15 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:15 | 0x101 | 2 | 29 68 | Motor_RPM | 10600.00 rpm | WARNING
-2026-01-16 10:45:15 | 0x102 | 2 | 04 7E | Vehicle_Speed | 115.00 km/h | OK
-2026-01-16 10:45:15 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:16 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:16 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:16 | 0x101 | 2 | 28 A0 | Motor_RPM | 10400.00 rpm | WARNING
-2026-01-16 10:45:16 | 0x102 | 2 | 04 60 | Vehicle_Speed | 112.00 km/h | OK
-2026-01-16 10:45:16 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:16 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:16 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:16 | 0x101 | 2 | 27 D8 | Motor_RPM | 10200.00 rpm | WARNING
-2026-01-16 10:45:16 | 0x102 | 2 | 04 42 | Vehicle_Speed | 109.00 km/h | OK
-2026-01-16 10:45:17 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:17 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:17 | 0x105 | 1 | 1E | Motor_Temperature | 30.00 C | OK
-2026-01-16 10:45:17 | 0x101 | 2 | 27 10 | Motor_RPM | 10000.00 rpm | OK
-2026-01-16 10:45:17 | 0x102 | 2 | 04 24 | Vehicle_Speed | 106.00 km/h | OK
-2026-01-16 10:45:17 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:17 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:17 | 0x105 | 1 | 1F | Motor_Temperature | 31.00 C | OK
-2026-01-16 10:45:17 | 0x101 | 2 | 26 48 | Motor_RPM | 9800.00 rpm | OK
-2026-01-16 10:45:18 | 0x102 | 2 | 04 06 | Vehicle_Speed | 103.00 km/h | OK
-2026-01-16 10:45:18 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:18 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:18 | 0x105 | 1 | 1F | Motor_Temperature | 31.00 C | OK
-2026-01-16 10:45:18 | 0x101 | 2 | 25 80 | Motor_RPM | 9600.00 rpm | OK
-2026-01-16 10:45:18 | 0x102 | 2 | 03 E8 | Vehicle_Speed | 100.00 km/h | OK
-2026-01-16 10:45:18 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:18 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:18 | 0x105 | 1 | 1F | Motor_Temperature | 31.00 C | OK
-2026-01-16 10:45:19 | 0x101 | 2 | 24 B8 | Motor_RPM | 9400.00 rpm | OK
-2026-01-16 10:45:19 | 0x102 | 2 | 03 CA | Vehicle_Speed | 97.00 km/h | OK
-2026-01-16 10:45:19 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
-2026-01-16 10:45:19 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
-2026-01-16 10:45:19 | 0x105 | 1 | 1F | Motor_Temperature | 31.00 C | OK
-2026-01-16 10:45:19 | 0x101 | 2 | 23 F0 | Motor_RPM | 9200.00 rpm | OK
+2026-01-17 14:32:25 | 0x101 | 2 | 00 C8 | Motor_RPM | 200.00 rpm | OK
+2026-01-17 14:32:25 | 0x102 | 2 | 00 19 | Vehicle_Speed | 2.50 km/h | OK
+2026-01-17 14:32:26 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:26 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:26 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:26 | 0x101 | 2 | 01 90 | Motor_RPM | 400.00 rpm | OK
+2026-01-17 14:32:26 | 0x102 | 2 | 00 32 | Vehicle_Speed | 5.00 km/h | OK
+2026-01-17 14:32:26 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:26 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:26 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:26 | 0x101 | 2 | 02 58 | Motor_RPM | 600.00 rpm | OK
+2026-01-17 14:32:27 | 0x102 | 2 | 00 4B | Vehicle_Speed | 7.50 km/h | OK
+2026-01-17 14:32:27 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:27 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:27 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:27 | 0x101 | 2 | 03 20 | Motor_RPM | 800.00 rpm | OK
+2026-01-17 14:32:27 | 0x102 | 2 | 00 64 | Vehicle_Speed | 10.00 km/h | OK
+2026-01-17 14:32:27 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:27 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:27 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:28 | 0x101 | 2 | 03 E8 | Motor_RPM | 1000.00 rpm | OK
+2026-01-17 14:32:28 | 0x102 | 2 | 00 7D | Vehicle_Speed | 12.50 km/h | OK
+2026-01-17 14:32:28 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:28 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:28 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:28 | 0x101 | 2 | 04 B0 | Motor_RPM | 1200.00 rpm | OK
+2026-01-17 14:32:28 | 0x102 | 2 | 00 96 | Vehicle_Speed | 15.00 km/h | OK
+2026-01-17 14:32:28 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:28 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:29 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:29 | 0x101 | 2 | 05 78 | Motor_RPM | 1400.00 rpm | OK
+2026-01-17 14:32:29 | 0x102 | 2 | 00 AF | Vehicle_Speed | 17.50 km/h | OK
+2026-01-17 14:32:29 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:29 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:29 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:29 | 0x101 | 2 | 06 40 | Motor_RPM | 1600.00 rpm | OK
+2026-01-17 14:32:29 | 0x102 | 2 | 00 C8 | Vehicle_Speed | 20.00 km/h | OK
+2026-01-17 14:32:30 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:30 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:30 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:30 | 0x101 | 2 | 07 08 | Motor_RPM | 1800.00 rpm | OK
+2026-01-17 14:32:30 | 0x102 | 2 | 00 E1 | Vehicle_Speed | 22.50 km/h | OK
+2026-01-17 14:32:30 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:30 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:30 | 0x105 | 1 | 19 | Motor_Temperature | 25.00 C | OK
+2026-01-17 14:32:30 | 0x101 | 2 | 07 D0 | Motor_RPM | 2000.00 rpm | OK
+2026-01-17 14:32:30 | 0x102 | 2 | 00 FA | Vehicle_Speed | 25.00 km/h | OK
+2026-01-17 14:32:31 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:31 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:31 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:31 | 0x101 | 2 | 08 98 | Motor_RPM | 2200.00 rpm | OK
+2026-01-17 14:32:31 | 0x102 | 2 | 01 13 | Vehicle_Speed | 27.50 km/h | OK
+2026-01-17 14:32:31 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:31 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:31 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:31 | 0x101 | 2 | 09 60 | Motor_RPM | 2400.00 rpm | OK
+2026-01-17 14:32:32 | 0x102 | 2 | 01 2C | Vehicle_Speed | 30.00 km/h | OK
+2026-01-17 14:32:32 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:32 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:32 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:32 | 0x101 | 2 | 0A 28 | Motor_RPM | 2600.00 rpm | OK
+2026-01-17 14:32:32 | 0x102 | 2 | 01 45 | Vehicle_Speed | 32.50 km/h | OK
+2026-01-17 14:32:32 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:32 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:32 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:33 | 0x101 | 2 | 0A F0 | Motor_RPM | 2800.00 rpm | OK
+2026-01-17 14:32:33 | 0x102 | 2 | 01 5E | Vehicle_Speed | 35.00 km/h | OK
+2026-01-17 14:32:33 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:33 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:33 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:33 | 0x101 | 2 | 0B B8 | Motor_RPM | 3000.00 rpm | OK
+2026-01-17 14:32:33 | 0x102 | 2 | 01 77 | Vehicle_Speed | 37.50 km/h | OK
+2026-01-17 14:32:33 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:34 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:34 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:34 | 0x101 | 2 | 0C 80 | Motor_RPM | 3200.00 rpm | OK
+2026-01-17 14:32:34 | 0x102 | 2 | 01 90 | Vehicle_Speed | 40.00 km/h | OK
+2026-01-17 14:32:34 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:34 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:34 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:34 | 0x101 | 2 | 0D 48 | Motor_RPM | 3400.00 rpm | OK
+2026-01-17 14:32:34 | 0x102 | 2 | 01 A9 | Vehicle_Speed | 42.50 km/h | OK
+2026-01-17 14:32:35 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:35 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:35 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:35 | 0x101 | 2 | 0E 10 | Motor_RPM | 3600.00 rpm | OK
+2026-01-17 14:32:35 | 0x102 | 2 | 01 C2 | Vehicle_Speed | 45.00 km/h | OK
+2026-01-17 14:32:35 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:35 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:35 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:35 | 0x101 | 2 | 0E D8 | Motor_RPM | 3800.00 rpm | OK
+2026-01-17 14:32:35 | 0x102 | 2 | 01 DB | Vehicle_Speed | 47.50 km/h | OK
+2026-01-17 14:32:36 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:36 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:36 | 0x105 | 1 | 1A | Motor_Temperature | 26.00 C | OK
+2026-01-17 14:32:36 | 0x101 | 2 | 0F A0 | Motor_RPM | 4000.00 rpm | OK
+2026-01-17 14:32:36 | 0x102 | 2 | 01 F4 | Vehicle_Speed | 50.00 km/h | OK
+2026-01-17 14:32:36 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK
+2026-01-17 14:32:36 | 0x104 | 2 | 01 E9 | Battery_Voltage | 48.90 V | OK
+2026-01-17 14:32:36 | 0x105 | 1 | 1B | Motor_Temperature | 27.00 C | OK
+2026-01-17 14:32:36 | 0x101 | 2 | 10 68 | Motor_RPM | 4200.00 rpm | OK
+2026-01-17 14:32:37 | 0x102 | 2 | 02 0D | Vehicle_Speed | 52.50 km/h | OK
+2026-01-17 14:32:37 | 0x103 | 1 | 63 | Battery_SOC | 99.00 % | OK

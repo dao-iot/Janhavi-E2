@@ -50,8 +50,7 @@ static CAN_SignalDef signal_table[] =
 
 /* RAW VALUE EXTRACTION */
 
-static uint32_t extract_raw_value(const CAN_Message *msg,
-                                  const CAN_SignalDef *sig)
+static uint32_t extract_raw_value(const CAN_Message *msg, const CAN_SignalDef *sig)
 {
     uint32_t raw = 0;
     int start_byte = sig->start_bit / 8;
