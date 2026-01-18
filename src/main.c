@@ -195,7 +195,7 @@ void run_simulation(void)
 
     while (1) {
         simulate_driving(&simulator);
-
+         
         CAN_Message messages[] = {
             make_rpm_message(&simulator),
             make_speed_message(&simulator),
@@ -271,4 +271,3 @@ int main(void)
 
     return 0;
 }
-    

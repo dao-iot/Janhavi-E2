@@ -121,6 +121,9 @@ static const char *dashboard_html =
 "document.getElementById('temp').innerText=d.motor_temperature;"
 "document.getElementById('rpm_warn').innerText=d.rpm_warning?'RPM OUT OF RANGE':'';"
 "document.getElementById('speed_warn').innerText=d.speed_warning?'SPEED OUT OF RANGE':'';"
+"document.getElementById('soc_warn').innerText=d.soc_warning?'SOC OUT OF RANGE':'';"
+"document.getElementById('voltage_warn').innerText=d.voltage_warning?'VOLTAGE OUT OF RANGE':'';"
+"document.getElementById('temp_warn').innerText=d.temp_warning?'TEMPERATURE OUT OF RANGE':'';"
 "}"
 "setInterval(update,500);update();"
 "</script>"
@@ -140,7 +143,7 @@ static const char *dashboard_html =
 #endif
 
 #define PORT 8080
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 4096
 
 /* WEB SERVER */
 
@@ -234,16 +237,22 @@ void start_web_server(void)
                     "\"vehicle_speed\":%.2f,"
                     "\"speed_warning\":%d,"
                     "\"battery_soc\":%.2f,"
+                    "\"soc_warning\":%d,"
                     "\"battery_voltage\":%.2f,"
-                    "\"motor_temperature\":%.2f"
+                    "\"voltage_warning\":%d,"
+                    "\"motor_temperature\":%.2f,"
+                    "\"temp_warning\":%d"
                     "}",
                     g_vehicle_data.motor_rpm,
                     g_vehicle_data.rpm_warning,
                     g_vehicle_data.vehicle_speed,
                     g_vehicle_data.speed_warning,
                     g_vehicle_data.battery_soc,
+                    g_vehicle_data.soc_warning,
                     g_vehicle_data.battery_voltage,
-                    g_vehicle_data.motor_temperature);
+                    g_vehicle_data.voltage_warning,
+                    g_vehicle_data.motor_temperature,
+                    g_vehicle_data.temp_warning);
             }
 
             send(client,resp,strlen(resp),0);

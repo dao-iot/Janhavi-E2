@@ -32,7 +32,6 @@ typedef struct
 
     /* Display unit */
     const char *unit;
-
 } CAN_SignalDef;
 
 /* SIGNAL TABLE (MINI DBC) */
@@ -114,12 +113,15 @@ void parse_can_message(const CAN_Message *msg)
         }
         else if (strcmp(signal->signal_name, "Battery_SOC") == 0) {
             g_vehicle_data.battery_soc = physical;
+            g_vehicle_data.soc_warning = out_of_range;
         }
         else if (strcmp(signal->signal_name, "Battery_Voltage") == 0) {
             g_vehicle_data.battery_voltage = physical;
+            g_vehicle_data.voltage_warning = out_of_range;
         }
         else if (strcmp(signal->signal_name, "Motor_Temperature") == 0) {
             g_vehicle_data.motor_temperature = physical;
+            g_vehicle_data.temp_warning = out_of_range;
         }
 
         return;

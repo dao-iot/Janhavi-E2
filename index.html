@@ -205,11 +205,11 @@ async function update() {
         volt.textContent = d.battery_voltage.toFixed(2);
         temp.textContent = d.motor_temperature.toFixed(1);
 
-        applyStatus(rpm,  d.motor_rpm,          0, 8000);
+        applyStatus(rpm,  d.motor_rpm,          0, 10000);
         applyStatus(spd,  d.vehicle_speed,      0, 120);
-        applyStatus(soc,  d.battery_soc,       20, 100);
-        applyStatus(volt, d.battery_voltage,   40, 60);
-        applyStatus(temp, d.motor_temperature,  0, 90);
+        applyStatus(soc,  d.battery_soc,       0, 100);
+        applyStatus(volt, d.battery_voltage,   0, 100);
+        applyStatus(temp, d.motor_temperature,  0, 150);
 
     } catch (e) {
         console.error("Fetch failed", e);

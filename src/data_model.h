@@ -46,6 +46,9 @@ typedef struct
     /* Runtime Warnings */
     int rpm_warning;
     int speed_warning;
+    int soc_warning;
+    int voltage_warning;
+    int temp_warning;
     int mode;
     TestDashboardData test_dashboard;
     
