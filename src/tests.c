@@ -59,7 +59,7 @@ static void test_voltage_scaling(void)
     CAN_Message msg = {
         .id  = 0x104,
         .dlc = 2,
-        .data = {0x02, 0x71}   /* 625 → 62.5 V */
+        .data = {0x02, 0x71}   /* 625 should scale to 62.5 V */
     };
 
     parse_can_message(&msg);
@@ -89,7 +89,7 @@ static void test_soc_range_check(void)
     CAN_Message msg = {
         .id  = 0x103,
         .dlc = 1,
-        .data = {0xFF}   /* 255% → invalid */
+        .data = {0xFF}   /* 255% is out of range and therefore invalid */
     };
 
     parse_can_message(&msg);
