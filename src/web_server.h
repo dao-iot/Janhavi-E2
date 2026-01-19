@@ -3,5 +3,4 @@
 
 /* Initialize and start the web server. */
 void start_web_server(void);
-
 #endif /* WEB_SERVER_H */

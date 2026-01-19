@@ -34,11 +34,11 @@ typedef struct
     const char *unit;
 } CAN_SignalDef;
 
-/* SIGNAL TABLE (MINI DBC) */
+/* SIGNAL TABLE (Lookup Table) */
 
 static CAN_SignalDef signal_table[] =
 {
-    { 0x101, "MotorRPM",       2, "Motor_RPM",       0, 16, 1.0f, 0.0f,   0.0f, 10000.0f, "rpm"  },
+    { 0x101, "MotorRPM",       2, "Motor_RPM",        0, 16, 1.0f, 0.0f,   0.0f, 10000.0f, "rpm"  },
     { 0x102, "VehicleSpeed",   2, "Vehicle_Speed",    0, 16, 0.1f, 0.0f,   0.0f,   120.0f, "km/h" },
     { 0x103, "BatterySOC",     1, "Battery_SOC",      0,  8, 1.0f, 0.0f,   0.0f,   100.0f, "%"    },
     { 0x104, "BatteryVoltage", 2, "Battery_Voltage",  0, 16, 0.1f, 0.0f,   0.0f,   100.0f, "V"    },

@@ -6,10 +6,7 @@
 #include "can_message.h"
 #include "data_model.h"
 
-static void add_test_result(const char *name,
-                            const char *input,
-                            const char *output,
-                            TestStatus status)
+static void add_test_result(const char *name, const char *input, const char *output, TestStatus status)
 {
     TestDashboardData *td = &g_vehicle_data.test_dashboard;
 
