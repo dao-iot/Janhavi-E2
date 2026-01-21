@@ -58,11 +58,11 @@ Continuously generates CAN frames to simulate vehicle behavior.
 ## Running the Project
 
 1. Build using the command -> pio run
-2. Run using the command -> pio run -t exec
+2. Run using the command -> .pio\build\native\program.exe
 3. Terminal will display : 
       Select Mode
-      1 → Run Parser Test Cases
-      2 → Run CAN Simulation
+      1 : Run Parser Test Cases
+      2 : Run CAN Simulation
 4. A Message logger with timestamps is also created to keep the logs.
 
 ### Learning Outcomes
